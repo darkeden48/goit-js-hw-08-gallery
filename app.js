@@ -63,3 +63,9 @@ const galleryItems = [
       description: 'Lighthouse Coast Sea',
     },
   ];
+  const galleryJs=document.querySelector('.js-gallery');
+  console.log(galleryJs);
+  const galleryItemsMap=galleryItems.map(item=>{
+const galleryItemsElement=document.createElement('li');
+const galleryItemsPhoto=document.createElement('img')
+  })
