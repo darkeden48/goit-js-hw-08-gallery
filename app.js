@@ -64,8 +64,43 @@ const galleryItems = [
     },
   ];
   const galleryJs=document.querySelector('.js-gallery');
-  console.log(galleryJs);
-  const galleryItemsMap=galleryItems.map(item=>{
-const galleryItemsElement=document.createElement('li');
-const galleryItemsPhoto=document.createElement('img')
-  })
+  const cardsMarkup=createGalleryCard(galleryItems);
+  
+  galleryJs.insertAdjacentHTML("beforeend",cardsMarkup);
+  
+  galleryJs.addEventListener('click',galleryItemsClick);
+  
+  function createGalleryCard(galleryItems){
+    return galleryItems
+    .map(({preview,original,description})=>{
+return `<li class=gallery__item>
+<a class=gallery__link href=${original}>
+<img 
+ class=gallery__image
+ data-source="${original}"
+ src="${preview}"
+ alt="${description}"
+ />
+ </a>
+ </li>`
+    })
+ .join("");
+  }
+
+  function galleryItemsClick(event){
+const lightboxJs=document.querySelector('.lightbox.is-open');
+if(lightboxJs){
+  lightboxJs.classList.remove('js-lightbox');
+}
+lightboxJs.classList.add('lightbox.is-open');
+  }
+
+
+
+
+
+
+
+
+
+
