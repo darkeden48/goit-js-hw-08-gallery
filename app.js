@@ -63,18 +63,25 @@ const galleryItems = [
       description: 'Lighthouse Coast Sea',
     },
   ];
+
+  const lightboxJs=document.querySelector('.js-lightbox');
+  const lightboxImage=document.querySelector('.lightbox__image');
   const galleryJs=document.querySelector('.js-gallery');
+  const galleryItem=document.querySelector('.gallery__item');
+  const lightboxButton=document.querySelector(".lightbox__button");
+  
   const cardsMarkup=createGalleryCard(galleryItems);
   
   galleryJs.insertAdjacentHTML("beforeend",cardsMarkup);
   
   galleryJs.addEventListener('click',galleryItemsClick);
+  lightboxButton.addEventListener('click',galleryItemsClickClose);
   
   function createGalleryCard(galleryItems){
     return galleryItems
     .map(({preview,original,description})=>{
 return `<li class=gallery__item>
-<a class=gallery__link href=${original}>
+<a class=gallery__link>
 <img 
  class=gallery__image
  data-source="${original}"
@@ -85,14 +92,17 @@ return `<li class=gallery__item>
  </li>`
     })
  .join("");
-  }
+  };
 
   function galleryItemsClick(event){
-const lightboxJs=document.querySelector('.lightbox.is-open');
-if(lightboxJs){
-  lightboxJs.classList.remove('js-lightbox');
-}
-lightboxJs.classList.add('lightbox.is-open');
+    const swatchEl=event.target;
+    lightboxJs.classList.add('is-open');
+    lightboxImage.src=swatchEl.dataset.source;
+  }
+
+  function galleryItemsClickClose(event){
+    const swatchEl=event.target;
+    lightboxJs.classList.remove('is-open');
   }
 
 
