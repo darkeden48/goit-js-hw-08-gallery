@@ -69,13 +69,13 @@ const galleryItems = [
   const galleryJs=document.querySelector('.js-gallery');
   const galleryItem=document.querySelector('.gallery__item');
   const lightboxButton=document.querySelector(".lightbox__button");
-  
   const cardsMarkup=createGalleryCard(galleryItems);
   
   galleryJs.insertAdjacentHTML("beforeend",cardsMarkup);
   
   galleryJs.addEventListener('click',galleryItemsClick);
   lightboxButton.addEventListener('click',galleryItemsClickClose);
+  
   
   function createGalleryCard(galleryItems){
     return galleryItems
