@@ -107,6 +107,7 @@ return `<li class=gallery__item>
   function galleryItemsClickClose(event){
     const swatchEl=event.target;
     lightboxJs.classList.remove('is-open');
+    lightboxImage.src=swatchEl.src;
   }
 
 
