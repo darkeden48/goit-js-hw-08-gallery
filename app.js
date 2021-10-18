@@ -96,8 +96,12 @@ return `<li class=gallery__item>
 
   function galleryItemsClick(event){
     const swatchEl=event.target;
+    if(!swatchEl.classList.contains("gallery__image")){return;}
     lightboxJs.classList.add('is-open');
+  
     lightboxImage.src=swatchEl.dataset.source;
+    console.log(lightboxButton)
+    console.log(swatchEl)
   }
 
   function galleryItemsClickClose(event){
