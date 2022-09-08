@@ -1,121 +1,122 @@
 const galleryItems = [
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825_1280.jpg',
-      description: 'Hokkaido Flower',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg',
-      description: 'Container Haulage Freight',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg',
-      description: 'Aerial Beach View',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg',
-      description: 'Flower Blooms',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg',
-      description: 'Alpine Mountains',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg',
-      description: 'Mountain Lake Sailing',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
-      description: 'Alpine Spring Meadows',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
-      description: 'Nature Landscape',
-    },
-    {
-      preview:
-        'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg',
-      original:
-        'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
-      description: 'Lighthouse Coast Sea',
-    },
-  ];
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825_1280.jpg',
+    description: 'Hokkaido Flower',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg',
+    description: 'Container Haulage Freight',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg',
+    description: 'Aerial Beach View',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg',
+    description: 'Flower Blooms',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg',
+    description: 'Alpine Mountains',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg',
+    description: 'Mountain Lake Sailing',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
+    description: 'Alpine Spring Meadows',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
+    description: 'Nature Landscape',
+  },
+  {
+    preview:
+      'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg',
+    original:
+      'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
+    description: 'Lighthouse Coast Sea',
+  },
+];
 
-  const lightboxJs=document.querySelector('.js-lightbox');
-  const lightboxImage=document.querySelector('.lightbox__image');
-  const galleryJs=document.querySelector('.js-gallery');
-  const galleryItem=document.querySelector('.gallery__item');
-  const lightboxButton=document.querySelector(".lightbox__button");
-  const cardsMarkup=createGalleryCard(galleryItems);
-  
-  galleryJs.insertAdjacentHTML("beforeend",cardsMarkup);
-  
-  galleryJs.addEventListener('click',galleryItemsClick);
-  lightboxButton.addEventListener('click',galleryItemsClickClose);
-  
-  
-  function createGalleryCard(galleryItems){
-    return galleryItems
-    .map(({preview,original,description})=>{
-return `<li class=gallery__item>
-<a class=gallery__link>
-<img 
- class=gallery__image
- data-source="${original}"
- src="${preview}"
- alt="${description}"
- />
- </a>
- </li>`
-    })
- .join("");
-  };
+const list = document.querySelector('.js-gallery');
+const lightboxJs = document.querySelector('.js-lightbox');
+const lightboxImage = document.querySelector('.lightbox__image');
+const button = document.querySelector('[data-action="close-lightbox"]');
 
-  function galleryItemsClick(event){
-    const swatchEl=event.target;
+function openModal(event) {
+  const swatchEl = event.target;
     if(!swatchEl.classList.contains("gallery__image")){return;}
     lightboxJs.classList.add('is-open');
-  
+    lightboxJs.addEventListener('click', closeExternale);
     lightboxImage.src=swatchEl.dataset.source;
-    console.log(lightboxButton)
-    console.log(swatchEl)
+}
+// not event target
+const closeExternale = (event) => {
+  if(!event.target.classList.contains("lightbox__image")){
+    closeButton();
   }
+}
+// function for close
+const closeButton = (event) => {
+  lightboxJs.classList.remove('is-open');
+  lightboxJs.removeEventListener('click', closeButton);
+  lightboxImage.src="";
+}
+// ESCAPE
+  document.addEventListener('keydown', function 
+  closeEscape(event) {
+    if(event.key === 'Escape') {
+      closeButton();
+    };
+  }); 
 
-  function galleryItemsClickClose(event){
-    const swatchEl=event.target;
-    lightboxJs.classList.remove('is-open');
-    lightboxImage.src=swatchEl.src;
-  }
+const lister = galleryItems.map(item=>{
+  const element = list.insertAdjacentHTML('afterbegin',
+  `
+<li class="gallery__item">
+  <a
+    class="gallery__link"
+  >
+    <img
+      class="gallery__image"
+      src="${item.preview}"
+      data-source="${item.original}"
+      alt="${item.description}"
+    />
+  </a>
+</li>
+`)
+return element;
+})
 
-
-
-
-
-
-
+list.addEventListener('click', openModal);
+button.addEventListener('click', closeButton);
 
 
 
